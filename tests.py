@@ -1,6 +1,6 @@
 import unittest
 import math
-from occurences import *
+import occurences
 
 class findOccurencesTests(unittest.TestCase):
     def test0(self):
@@ -87,3 +87,6 @@ class binaryTests(unittest.TestCase):
         self.assertEqual(binary(0),'0')
     def test1(self):
         self.assertEqual(binary(11),'1011')
+
+if __name__ == '__main__':
+    unittest.main()

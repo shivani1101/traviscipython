@@ -1,5 +1,4 @@
 import math
-from tests import *
 
 def findOccurences(source,matchChar):
     """Assumes source is a string and matchChar is a matchCharacter
@@ -87,5 +86,3 @@ def binary(x):
         return '1'
     return binary(x//2)+binary(x%2)
 
-if __name__ == '__main__':
-    unittest.main(exit=False)
