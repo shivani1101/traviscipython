@@ -1,6 +1,6 @@
 import unittest
 import math
-import occurences
+from occurences import *
 
 class findOccurencesTests(unittest.TestCase):
     def test0(self):
