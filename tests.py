@@ -79,6 +79,8 @@ class biggestBuriedTests(unittest.TestCase):
         self.assertEqual(biggestBuried('this15isast22ring-55'),55)  
     def test4(self):
         self.assertEqual(biggestBuried('uguyfytdtyr'),0)
+    def test5(self):
+        self.assertEqual(biggestBuried('diunsdiuncdjnv'),0)
 
 class binaryTests(unittest.TestCase):
     def test0(self):
