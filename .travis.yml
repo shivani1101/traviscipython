@@ -5,7 +5,8 @@ python:
 install:
   - pip install -r requirements.txt
 script:
-  - pytest --cov-report term --cov=investpy tests.py
-
+  - python3 occurences.py
+after_script:
+  - coverage report occurences.py
 after_success:
   - codecov
