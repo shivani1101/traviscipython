@@ -26,9 +26,9 @@ deploy:
   app: "helloworld"
   env: "helloworld-env"
   bucket_name: "elasticbeanstalk-us-east-1"
-  local_dir: EB-AWS
+  local_dir: deployment completed 
   on:
     branch: main
     
 after_deploy:
-  - echo "deployment completed "
+  - echo "deployment completed"
