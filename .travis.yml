@@ -16,7 +16,7 @@ script:
 after_success:
   - bash <(curl -s https://codecov.io/bash)
   - docker build -t cps847/myfirstrepo .
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin  
+
   - docker push cps847/myfirstrepo
   - docker run -d -p 5000:5000 cps847/myfirstrepo /bin/sh
   - docker ps -a 
