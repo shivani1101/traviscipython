@@ -1,19 +1,7 @@
 
-# Get python version
-FROM ubuntu:bionic
-
-# Install python dependencies
-RUN apt-get update && \
-    apt-get -y upgrade && \
-    apt-get install python-pip curl git -y && \
-    pip install pytest codecov
-
-
-# Setup work directory
-ENV APP_HOME=/usr/local/app/
-RUN mkdir -p $APP_HOME
-WORKDIR $APP_HOME
-
-# Copy git content from current branch
-ADD . $WORKDIR
-CMD ["echo", "webapp"]
+FROM python:3.6.1
+WORKDIR /docker-flask-test
+ADD . /docker-flask-test
+RUN pip install -r requirements.txt
+EXPOSE 5000
+CMD ["python","hello_world_app.py"]
