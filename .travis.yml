@@ -28,7 +28,7 @@ deploy:
   app: "helloworld"
   env: "helloworld-env"
   bucket_name: "elasticbeanstalk-us-east-2-561357807659"
-  local_dir: deployment completed 
+  local_dir: Dockerfiles
   on:
     branch: main
     
