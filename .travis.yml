@@ -1,6 +1,10 @@
 language: python
 python:
 - 3.6
+
+services:
+  - docker
+  
 install:
   - pip install -r requirements.txt
 
@@ -9,3 +13,6 @@ script:
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+  - docker build -t cps847/myfirstrepo
+  - docker run -d -p 5000:5000 cps847/myfirstrepo /bin/sh
+  - docker ps -a  
